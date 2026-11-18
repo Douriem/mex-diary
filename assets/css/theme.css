@@ -128,11 +128,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
   font-weight: 400;
 }
 .poem-body .stanza + .stanza { margin-top: 1.4em; }
+.poem-body.dropcap .stanza + .stanza { clear: left; } /* drop cap never leaks into the next stanza */
 .poem-body.dropcap .stanza:first-child::first-letter {
   font-family: var(--f-black);
   float: left;
-  font-size: 3.6em;
-  line-height: 0.82;
+  font-size: 3em;
+  line-height: 0.8;
   padding: 0.06em 0.12em 0 0;
   color: var(--crimson);
   text-shadow: 0 0 24px rgba(163, 20, 42, 0.5);
