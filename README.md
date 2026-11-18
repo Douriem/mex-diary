@@ -1,10 +1,10 @@
-# Max Diary
+# Mex Diary
 
-Gothic journal of philosophical poetry by Max — in French and Arabic.
+Gothic journal of philosophical poetry by Mexem — in French and Arabic.
 
 ## Files
 - `index.html` — the public site (featured poem, searchable archive, reader, about, contact; FR/EN interface).
-- `admin.html` — **L’atelier**, the dashboard where Max writes and publishes poems. Not linked from the site.
+- `admin.html` — **L’atelier**, the dashboard where Mexem writes and publishes poems. Not linked from the site.
 - `poems.json` — every poem. The site reads it; the dashboard writes it.
 - `assets/` — styles (`css/`) and scripts (`js/`).
 

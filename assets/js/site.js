@@ -1,4 +1,4 @@
-/* Max Diary — public site */
+/* Mex Diary — public site */
 (function () {
   const { roman, escapeHtml, poemToHtml, excerpt, numberPoems, formatDate, loadPoems, store, langAttrs, fold } = window.MD;
 
@@ -16,12 +16,12 @@
       'archive.all': 'Tous', 'archive.fr': 'Français', 'archive.ar': 'العربية', 'archive.read': 'Lire', 'archive.error': 'Les poèmes n’ont pas pu être chargés.',
       'archive.count': n => n === 1 ? '1 poème, une seule nuit.' : `${n} poèmes, autant de nuits.`,
       'about.eyebrow': 'À propos', 'about.title': 'Celle qui écrit la nuit',
-      'about.p1': 'Max écrit de la poésie philosophique, en français et en arabe. Ses textes reviennent toujours aux mêmes questions : l’amour qui ne se vit plus que par l’âme, la nuit qui guide, la mort qui inspire, et tout ce que l’on ne dit qu’inconsciemment.',
-      'about.p2': 'Max Diary est son journal : un lieu sans bruit, où chaque poème est un fragment daté, publié tel qu’il a été écrit. Pas de vérité à vendre — seulement des questions bien tenues.',
+      'about.p1': 'Mexem écrit de la poésie philosophique, en français et en arabe. Ses textes reviennent toujours aux mêmes questions : l’amour qui ne se vit plus que par l’âme, la nuit qui guide, la mort qui inspire, et tout ce que l’on ne dit qu’inconsciemment.',
+      'about.p2': 'Mex Diary est son journal : un lieu sans bruit, où chaque poème est un fragment daté, publié tel qu’il a été écrit. Pas de vérité à vendre — seulement des questions bien tenues.',
       'about.lineage': 'Dans la lignée de',
-      'contact.title': 'Écrire à Max', 'contact.text': 'Pour une lecture, une collaboration, ou simplement pour répondre à un poème.',
+      'contact.title': 'Écrire à Mexem', 'contact.text': 'Pour une lecture, une collaboration, ou simplement pour répondre à un poème.',
       'contact.email': 'Envoyer une lettre',
-      'footer.text': '© 2026 Max Diary — Tous les mots sont à elle.',
+      'footer.text': '© 2026 Mex Diary — Tous les mots sont à elle.',
       'reader.copy': 'Copier le lien', 'reader.close': 'Fermer', 'reader.translation': 'Traduction',
       'reader.prev': 'Précédent', 'reader.next': 'Suivant', 'reader.copied': 'Lien copié'
     },
@@ -37,12 +37,12 @@
       'archive.all': 'All', 'archive.fr': 'French', 'archive.ar': 'العربية', 'archive.read': 'Read', 'archive.error': 'The poems could not be loaded.',
       'archive.count': n => n === 1 ? '1 poem, a single night.' : `${n} poems, as many nights.`,
       'about.eyebrow': 'About', 'about.title': 'She who writes at night',
-      'about.p1': 'Max writes philosophical poetry, in French and in Arabic. Her texts keep returning to the same questions: love that can only be lived through the soul, the night that guides, death that inspires, and everything we only ever say unconsciously.',
-      'about.p2': 'Max Diary is her journal: a quiet place where every poem is a dated fragment, published exactly as it was written. No truth for sale — only questions, held well.',
+      'about.p1': 'Mexem writes philosophical poetry, in French and in Arabic. Her texts keep returning to the same questions: love that can only be lived through the soul, the night that guides, death that inspires, and everything we only ever say unconsciously.',
+      'about.p2': 'Mex Diary is her journal: a quiet place where every poem is a dated fragment, published exactly as it was written. No truth for sale — only questions, held well.',
       'about.lineage': 'In the line of',
-      'contact.title': 'Write to Max', 'contact.text': 'For a reading, a collaboration, or simply to answer a poem.',
+      'contact.title': 'Write to Mexem', 'contact.text': 'For a reading, a collaboration, or simply to answer a poem.',
       'contact.email': 'Send a letter',
-      'footer.text': '© 2026 Max Diary — Every word is hers.',
+      'footer.text': '© 2026 Mex Diary — Every word is hers.',
       'reader.copy': 'Copy link', 'reader.close': 'Close', 'reader.translation': 'Translation',
       'reader.prev': 'Previous', 'reader.next': 'Next', 'reader.copied': 'Link copied'
     }

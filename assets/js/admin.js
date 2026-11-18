@@ -1,4 +1,4 @@
-/* Max Diary — L'atelier: write poems and publish them to poems.json on GitHub */
+/* Mex Diary — L'atelier: write poems and publish them to poems.json on GitHub */
 (function () {
   const { roman, escapeHtml, poemToHtml, slugify, numberPoems, formatDate, normalize, loadPoems, store, fold } = window.MD;
 
