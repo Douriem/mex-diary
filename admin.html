@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>L’atelier — Max Diary</title>
+  <meta name="theme-color" content="#0a0506">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0506'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='44' fill='%23a3142a'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=UnifrakturMaguntia&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="bar">
+    <div class="bar-brand">
+      <a href="index.html" class="bar-logo">Max Diary</a>
+      <span class="bar-sub">L’atelier</span>
+    </div>
+    <div class="bar-actions">
+      <span class="status" id="status"><i></i><span id="statusText">Mode local</span></span>
+      <a href="index.html" target="_blank" rel="noopener" class="btn btn-small">Voir le site ↗</a>
+      <button type="button" class="btn btn-small" id="openSettings">Réglages</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Poem list -->
+    <aside class="side" id="side">
+      <button type="button" class="btn btn-blood side-new" id="newPoem">+ Nouveau poème</button>
+      <label class="side-search">
+        <span class="sr-only">Chercher</span>
+        <input type="search" id="listSearch" placeholder="Chercher…" autocomplete="off">
+      </label>
+      <ul class="list" id="list" aria-label="Poèmes"></ul>
+      <div class="side-foot">
+        <p id="dirtyNote" class="dirty-note" hidden></p>
+        <button type="button" class="btn btn-blood side-publish" id="publish">Publier</button>
+      </div>
+    </aside>
+
+    <!-- Editor -->
+    <main class="editor" id="editor">
+      <div class="editor-empty" id="editorEmpty">
+        <p class="editor-empty-mark">✝</p>
+        <p>Choisis un poème à gauche, ou commence-en un nouveau.</p>
+      </div>
+
+      <form class="form" id="form" hidden autocomplete="off">
+        <div class="form-top">
+          <button type="button" class="back-to-list" id="backToList">← Poèmes</button>
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" id="tabWrite" aria-selected="true">Écrire</button>
+            <button type="button" role="tab" id="tabPreview" aria-selected="false">Aperçu</button>
+          </div>
+        </div>
+
+        <div class="pane" id="paneWrite">
+          <label class="field field-title">
+            <span>Titre</span>
+            <input type="text" id="fTitle" required placeholder="Sans titre">
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Date</span>
+              <input type="date" id="fDate">
+            </label>
+            <label class="field">
+              <span>Langue</span>
+              <select id="fLang">
+                <option value="fr">Français</option>
+                <option value="ar">العربية</option>
+              </select>
+            </label>
+            <label class="field field-check">
+              <input type="checkbox" id="fFeatured">
+              <span>À la une</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Thèmes <em>séparés par des virgules</em></span>
+            <input type="text" id="fTags" placeholder="amour, nuit, âme">
+          </label>
+
+          <label class="field">
+            <span>Poème <em>ligne vide = nouvelle strophe</em></span>
+            <textarea id="fBody" rows="16" placeholder="Écris ici…" spellcheck="true"></textarea>
+          </label>
+          <p class="counts" id="counts"></p>
+
+          <details class="more">
+            <summary>Plus d’options</summary>
+            <label class="field">
+              <span>Traduction anglaise <em>facultatif</em></span>
+              <textarea id="fTranslation" rows="8" lang="en"></textarea>
+            </label>
+            <label class="field">
+              <span>Image <em>lien vers une image, facultatif</em></span>
+              <input type="url" id="fImage" placeholder="https://…">
+            </label>
+          </details>
+        </div>
+
+        <div class="pane preview" id="panePreview" hidden>
+          <p class="eyebrow" id="pvMeta"></p>
+          <h2 class="pv-title" id="pvTitle"></h2>
+          <figure class="pv-figure" id="pvFigure" hidden><img id="pvImage" alt=""></figure>
+          <div class="poem-body dropcap" id="pvBody"></div>
+          <div class="pv-tags" id="pvTags"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-small danger" id="deletePoem">Supprimer</button>
+          <span class="saved-hint" id="savedHint">Brouillon enregistré sur cet appareil</span>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <!-- Settings -->
+  <dialog class="settings" id="settings" aria-labelledby="settingsTitle">
+    <form method="dialog" class="settings-inner" id="settingsForm">
+      <header class="settings-head">
+        <h2 id="settingsTitle">Réglages</h2>
+        <button type="submit" class="icon-btn" value="cancel" aria-label="Fermer">✕</button>
+      </header>
+
+      <section>
+        <h3>Publier sur GitHub</h3>
+        <p class="help">Le site lit ses poèmes dans le fichier <code>poems.json</code> du dépôt GitHub. Pour que le bouton <b>Publier</b> fonctionne, l’atelier a besoin d’un jeton d’accès limité à ce dépôt.</p>
+        <div class="field-row">
+          <label class="field"><span>Compte GitHub</span><input type="text" id="sOwner" placeholder="nom-du-compte"></label>
+          <label class="field"><span>Dépôt</span><input type="text" id="sRepo" placeholder="max-diary"></label>
+        </div>
+        <div class="field-row">
+          <label class="field"><span>Branche</span><input type="text" id="sBranch" placeholder="main"></label>
+          <label class="field"><span>Fichier</span><input type="text" id="sPath" placeholder="poems.json"></label>
+        </div>
+        <label class="field">
+          <span>Jeton d’accès <em>reste uniquement dans ce navigateur</em></span>
+          <input type="password" id="sToken" placeholder="github_pat_…" autocomplete="off">
+        </label>
+        <details class="help-details">
+          <summary>Comment créer le jeton ?</summary>
+          <ol>
+            <li>Sur GitHub : <b>Settings → Developer settings → Fine-grained tokens → Generate new token</b>.</li>
+            <li><b>Repository access</b> : « Only select repositories » → choisis uniquement le dépôt du site.</li>
+            <li><b>Permissions → Contents</b> : « Read and write ». Rien d’autre.</li>
+            <li>Copie le jeton et colle-le ici. Ne le partage jamais.</li>
+          </ol>
+        </details>
+        <div class="settings-buttons">
+          <button type="button" class="btn btn-small" id="testConn">Tester la connexion</button>
+          <button type="button" class="btn btn-small" id="forgetToken">Oublier le jeton</button>
+          <button type="button" class="btn btn-small btn-blood" id="saveSettings">Enregistrer</button>
+        </div>
+        <p class="conn-result" id="connResult" role="status"></p>
+      </section>
+
+      <section>
+        <h3>Sauvegarde</h3>
+        <p class="help">Télécharge tous les poèmes dans un fichier, ou recharge un fichier <code>poems.json</code>.</p>
+        <div class="settings-buttons">
+          <button type="button" class="btn btn-small" id="exportJson">Télécharger poems.json</button>
+          <label class="btn btn-small file-btn">Importer…<input type="file" id="importJson" accept="application/json,.json" hidden></label>
+          <button type="button" class="btn btn-small" id="reloadRemote">Recharger depuis le site</button>
+        </div>
+      </section>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

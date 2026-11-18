@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Diary — Poésie philosophique</title>
+  <meta name="description" content="Max Diary : le journal de poésie philosophique de Max. Poèmes en français et en arabe sur l’amour, l’âme, la nuit et la mort.">
+  <meta name="theme-color" content="#0a0506">
+  <meta property="og:title" content="Max Diary">
+  <meta property="og:description" content="Fragments d’une âme qui doute — poésie philosophique, écrite la nuit, en français et en arabe.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0506'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='44' fill='%23a3142a'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=UnifrakturMaguntia&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="mist" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-logo" aria-label="Max Diary">Max Diary</a>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Navigation">
+      <a href="#dernier" data-i18n="nav.latest">Dernier fragment</a>
+      <a href="#poemes" data-i18n="nav.poems">Poèmes</a>
+      <a href="#apropos" data-i18n="nav.about">À propos</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+
+    <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <p class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">Journal de poésie philosophique</p>
+      <h1 class="hero-title">Max <span>Diary</span></h1>
+      <p class="hero-lede" data-i18n="hero.lede">Fragments d’une âme qui doute — écrits la nuit, en français et en arabe.</p>
+      <div class="hero-actions">
+        <a href="#poemes" class="btn btn-blood" data-i18n="hero.read">Lire les poèmes</a>
+        <a href="#dernier" class="btn" data-i18n="hero.latest">Le dernier fragment</a>
+      </div>
+      <a href="#dernier" class="hero-scroll" aria-label="Descendre">
+        <span data-i18n="hero.scroll">descendre</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <!-- Epigraph -->
+    <section class="epigraph" aria-label="Épigraphe">
+      <blockquote>
+        <p>« Les autres, vous l’enfer, dites-moi pourquoi mon être m’inspire autant ? »</p>
+        <cite>— Max, <span data-i18n="epigraph.source">La nuit étoilée</span></cite>
+      </blockquote>
+    </section>
+
+    <!-- Featured poem -->
+    <section class="featured" id="dernier" aria-labelledby="featuredTitle">
+      <div class="featured-meta">
+        <p class="eyebrow" data-i18n="featured.eyebrow">Le dernier fragment</p>
+        <p class="featured-num" id="featuredNum"></p>
+        <h2 class="featured-title" id="featuredTitle">…</h2>
+        <p class="featured-date" id="featuredDate"></p>
+        <div class="featured-tags" id="featuredTags"></div>
+        <button type="button" class="btn btn-small" id="featuredOpen" data-i18n="featured.open">Ouvrir dans le lecteur</button>
+      </div>
+      <div class="featured-poem poem-body dropcap" id="featuredBody"></div>
+    </section>
+
+    <!-- Archive -->
+    <section class="archive" id="poemes" aria-labelledby="archiveTitle">
+      <header class="section-head">
+        <p class="eyebrow" data-i18n="archive.eyebrow">L'archive</p>
+        <h2 id="archiveTitle" data-i18n="archive.title">Poèmes</h2>
+        <p class="section-sub" id="archiveCount"></p>
+      </header>
+
+      <div class="archive-tools">
+        <label class="search">
+          <span class="sr-only" data-i18n="archive.search">Chercher un poème</span>
+          <input type="search" id="search" placeholder="Chercher un mot, un titre…" data-i18n-placeholder="archive.searchPh" autocomplete="off">
+        </label>
+        <div class="chips" id="chips" role="group" aria-label="Thèmes"></div>
+      </div>
+
+      <div class="poem-grid" id="poemGrid" aria-live="polite"></div>
+      <p class="empty" id="empty" hidden data-i18n="archive.empty">Aucun poème ne répond à ce silence.</p>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="apropos" aria-labelledby="aboutTitle">
+      <div class="portrait" aria-hidden="true">
+        <div class="portrait-frame"><span>M</span></div>
+        <p class="eyebrow portrait-caption">Max · Poétesse</p>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow" data-i18n="about.eyebrow">À propos</p>
+        <h2 id="aboutTitle" data-i18n="about.title">Celle qui écrit la nuit</h2>
+        <p data-i18n="about.p1">Max écrit de la poésie philosophique, en français et en arabe. Ses textes reviennent toujours aux mêmes questions : l’amour qui ne se vit plus que par l’âme, la nuit qui guide, la mort qui inspire, et tout ce que l’on ne dit qu’inconsciemment.</p>
+        <p data-i18n="about.p2">Max Diary est son journal : un lieu sans bruit, où chaque poème est un fragment daté, publié tel qu’il a été écrit. Pas de vérité à vendre — seulement des questions bien tenues.</p>
+        <div class="influences">
+          <p class="eyebrow" data-i18n="about.lineage">Dans la lignée de</p>
+          <ul>
+            <li>Baudelaire</li><li>Rimbaud</li><li>Cioran</li><li>Camus</li><li>Simone Weil</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="ornament" aria-hidden="true">✝</div>
+      <h2 id="contactTitle" data-i18n="contact.title">Écrire à Max</h2>
+      <p data-i18n="contact.text">Pour une lecture, une collaboration, ou simplement pour répondre à un poème.</p>
+      <div class="contact-links">
+        <!-- REPLACE with her real addresses -->
+        <a class="btn btn-blood" href="mailto:contact@example.com" data-i18n="contact.email">Envoyer une lettre</a>
+        <a class="btn" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-logo">Max Diary</p>
+    <p data-i18n="footer.text">© 2026 Max Diary — Tous les mots sont à elle.</p>
+  </footer>
+
+  <!-- Poem reader -->
+  <dialog class="reader" id="reader" aria-labelledby="readerTitle">
+    <div class="reader-inner">
+      <header class="reader-head">
+        <span class="eyebrow" id="readerNum"></span>
+        <div class="reader-head-actions">
+          <button type="button" class="reader-icon" id="readerCopy" data-i18n-title="reader.copy" title="Copier le lien" aria-label="Copier le lien">⧉</button>
+          <button type="button" class="reader-icon" id="readerClose" data-i18n-title="reader.close" title="Fermer" aria-label="Fermer">✕</button>
+        </div>
+      </header>
+      <article class="reader-article">
+        <h2 class="reader-title" id="readerTitle"></h2>
+        <p class="reader-date" id="readerDate"></p>
+        <div class="reader-toggle" id="readerToggle" hidden role="group">
+          <button type="button" data-view="fr" aria-pressed="true">Original</button>
+          <button type="button" data-view="en" aria-pressed="false" data-i18n="reader.translation">Traduction</button>
+        </div>
+        <figure class="reader-figure" id="readerFigure" hidden><img id="readerImage" alt="" loading="lazy"></figure>
+        <div class="poem-body dropcap" id="readerBody"></div>
+        <div class="reader-tags" id="readerTags"></div>
+      </article>
+      <footer class="reader-nav">
+        <button type="button" class="btn btn-small" id="readerPrev">← <span data-i18n="reader.prev">Précédent</span></button>
+        <button type="button" class="btn btn-small" id="readerNext"><span data-i18n="reader.next">Suivant</span> →</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

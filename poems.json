@@ -1,0 +1,124 @@
+{
+  "poems": [
+    {
+      "id": "p-calme-eruption",
+      "slug": "entre-le-calme-et-l-eruption",
+      "title": "Entre le calme et l’éruption",
+      "date": "2023-10-06",
+      "lang": "fr",
+      "tags": ["âme", "illusion"],
+      "featured": false,
+      "body": "Elle semblait être du genre à veiller sur les autres même en dormant,\n\nÉtant telle une douce berceuse silencieuse que seule l’âme se pouvait d’entendre.\n\nElle ne marchait pas, généralement, elle trébuchait. Récoltant ainsi fleurs et pierres.\n\nAux fleurs, elle retirait les épines.\nAux pierres, elle déposait de la résine.\n\nEt souvent elle était là sans vraiment l’être.\n\nPerdue entre réalité et illusion,\nPerdue entre le calme et l’éruption.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-corps-et-ame",
+      "slug": "corps-et-ame",
+      "title": "Corps et âme",
+      "date": "2023-10-24",
+      "lang": "fr",
+      "tags": ["désir", "corps"],
+      "featured": false,
+      "body": "Et si tu mouillais mon corps à en faire fleurir les draps\n\nJe te laisserais mes courbes accueillant tes mains\n\nLeurs paumes sur mes seins, serrant jusqu’à les déformer\n\nTa paume sur ma joue rapprochant mes lèvres aux tiennes\n\nEt ma respiration s’accélère au mélange de la tienne\n\nTon souffle brûlant rallumant mes entrailles\n\nJe t’en pris, pénètre-moi corps et âme.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-equilibre-parfait",
+      "slug": "equilibre-parfait",
+      "title": "Équilibre parfait",
+      "date": "2023-11-15",
+      "lang": "fr",
+      "tags": ["amour", "colère"],
+      "featured": false,
+      "body": "L’entrechoque des mots reflétant la colère de nos esprits\n\nEt la fluidité entre nos regards reflétant la passion entre nos esprits\n\nColère et passion s’unissent,\nS’enlacent, se détachent puis se rattachent\n\nEt nous étions tel deux être\nLié par l’amour\nSéparer par ce dernier.\n\nJe t’aimais et te haïssait d’un équilibre parfait.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-nuit-etoilee",
+      "slug": "la-nuit-etoilee",
+      "title": "La nuit étoilée",
+      "date": "2023-05-24",
+      "lang": "fr",
+      "tags": ["nuit", "mort"],
+      "featured": false,
+      "body": "J’ai suivis les voix en moi me guidant dans la nuit étoilée\nTel que nous suivons la résonance de l’écho d’un défunt\n\nJ’ai erré dans mon jardin sous la lumière de la lune caressante\nCherchant une fleur pouvant me rappeler le parfum d’une renaissance\n\nJ’ai lu et relu mes propres poèmes écrits au chant d’un oiseau disparu\nEt jusqu’à l’aube je reste éveillée admirant les couleurs du ciel changeantes\n\nJe m’inspire de ce que les autres décrivent de mort\nLes autres, vous l’enfer, dites-moi pourquoi mon être m’inspire autant ?",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-melodie-perturbee",
+      "slug": "melodie-perturbee",
+      "title": "Mélodie perturbée",
+      "date": "2024-02-27",
+      "lang": "fr",
+      "tags": ["musique", "mer"],
+      "featured": false,
+      "body": "Mélodie perturbée fusionnant au bruit des vagues,\n\nSon esprit dans cette harmonie musicale divague,\n\nEt sa voix, inconscient de sa maitrise, rejoint le bal et s’évade,\n\nLa fusion des trois rejoint ce ciel de couleurs nullement fade.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-la-guerre",
+      "slug": "la-guerre",
+      "title": "La guerre",
+      "date": "2024-03-21",
+      "lang": "fr",
+      "tags": ["guerre", "amour", "âme"],
+      "featured": false,
+      "body": "La guerre tout en versant le sang d’innocents se voit, malgré elle, tuait l’égo des cœurs, l’humain ne savait donc plus aimer que par l’âme, l’authentique et le fragile.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-inconsciemment",
+      "slug": "inconsciemment",
+      "title": "Inconsciemment",
+      "date": "2024-03-21",
+      "lang": "fr",
+      "tags": ["amour", "désir", "âme"],
+      "featured": true,
+      "body": "Ma pudeur me mets à nue devant tes yeux,\nEt mon corps au près du tien frissonne sans pour autant trembler.\n\nMes poèmes se voient t’aimer inconsciemment\n\nMa passion s’alimente de ton être, de ta voix\nEt mon âme au près de la tienne renait sans pour autant mourir.\n\nMes mots se voient te décrire inconsciemment",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-katibat-al-shir",
+      "slug": "katibat-al-shir",
+      "title": "كاتبة الشعر",
+      "date": "2024-03-23",
+      "lang": "ar",
+      "tags": ["amour", "poésie", "foi"],
+      "featured": false,
+      "body": "جَعلتُ عَينَايَ فِداكَ بِاسمِ الشِّعرِ،\nو مَا الشِّعرُ إلَا نيرانُ عَينَيْك،\nيَا مَن الذي بِنَظرةٍ سَحَرنِي.\n\nكُنتُ أظُنُّ نَفسِي كَاتِبةَ الشِّعرِ،\nو السَاحِرةَ التِي سَلَبتْ عَينَيْكَ،\nحَتَى إن لَاقَانِي اللهُ بِكَ،\nفَتُبتُ حِينهَا إليهِ، وَ نَزلتُ لِعندِكَ،\nفِي النِهايَةِ، جَعلتُ صَوتِي دُعاءً لِنصرِكَ.",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-tumaanina",
+      "slug": "tumaanina",
+      "title": "طمأنينة",
+      "date": "2024-03-27",
+      "lang": "ar",
+      "tags": ["amour"],
+      "featured": false,
+      "body": "أَعطيتُكَ قلبًا كَان يَتمناهُ آلافُ الأشخاصِ،\nفَأهدَيتنِي طُمَأنينةً آلافُ البيُوتِ لَا تملِكهَا،\n\nفِي حُبكِ رَاحةُ البَالِ و الجَسَدِ،\nكُنتُ أتَمناهَا مُنذُ كُنتُ فِي المَهدِ،\nوَ فِي حُبِّي وِفاءُ يَشهَدُ لهُ الحَبيبُ و الغَرِيبُ،",
+      "translation": "",
+      "image": ""
+    },
+    {
+      "id": "p-uyun-iblis",
+      "slug": "uyun-iblis",
+      "title": "عيون إبليس",
+      "date": "2024-03-29",
+      "lang": "ar",
+      "tags": ["foi", "âme", "guerre"],
+      "featured": false,
+      "body": "رأى إبليس يومًا في عينيه ما لم أرى\nفجاءني في ليلة مظلمة يخبرني ما جرى\nألم يوصي ربنا بالسماح و احسن الذكر طلب المغفرة\nلا تجعلي قلبك كقلبي بالحقد و الكره غارقًا\nو أنت تجهلين الحرب في شوارع روحه و النيران\nالقلب نائما ليس ميتا و العقل في حيرة تتلف الميزان،\n\nما السر المختفي بتلك\nالعيون التي جعلت\nإبليس لله ذاكرا ؟",
+      "translation": "",
+      "image": ""
+    }
+  ]
+}
